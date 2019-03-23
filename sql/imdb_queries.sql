@@ -86,3 +86,59 @@ Mystic River
 
 
 
+
+
+
+
+SELECT d.first_name, d.last_name FROM directors d
+								JOIN movies_directors md ON md.director_id = d.id
+								JOIN movies m ON md.movie_id = m.id
+								JOIN movies_genres mg ON mg.movie_id = m.id
+								WHERE mg.genre = 'Horror'
+
+
+James (I) Cameron
+Paul (I) Verhoeven
+David Koepp
+
+
+
+
+
+
+
+
+
+
+
+SELECT a.first_name, a.last_name FROM actors a
+								JOIN roles r ON r.actor_id = a.id
+								JOIN movies m ON r.movie_id = m.id
+								JOIN movies_directors md ON md.movie_id = m.id
+								JOIN directors d ON md.director_id = d.id
+								WHERE d.first_name = 'Christopher' AND d.last_name = 'Nolan'
+Dean Alexandrou
+Joey Ansah
+Christian Bale
+Abdul Blackmanwest
+Mark Boone Junior
+Tim (I) Booth
+Morne Botes
+Richard Brake
+Cliff Bura
+Michael (I) Caine
+Michael (XIII) Coleman
+Phill Curr
+Ray Donn
+Barry Dowden
+Freedom Eche
+Charles (VI) Edwards
+Jonathan D. Ellis
+James Embree
+Jon Foo
+Morgan (I) Freeman
+John Ghaly
+Dwight Gooden
+Tamer Hassan
+Rutger Hauer
+Scott Hinds
